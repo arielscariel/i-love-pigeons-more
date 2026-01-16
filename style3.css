@@ -1,0 +1,136 @@
+* { box-sizing: border-box; }
+
+
+ @keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pigeon-fly {
+  animation: float 3s ease-in-out infinite;
+}
+
+.pigeon-fly:nth-child(1) { animation-delay: 0s; }
+.pigeon-fly:nth-child(2) { animation-delay: 0.3s; }
+.pigeon-fly:nth-child(3) { animation-delay: 0.6s; }
+.pigeon-fly:nth-child(4) { animation-delay: 0.9s; }
+.pigeon-fly:nth-child(5) { animation-delay: 1.2s; }
+.pigeon-fly:nth-child(6) { animation-delay: 1.5s; }
+
+.pigeon-fly.reverse {
+  animation-direction: alternate-reverse;
+}
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #293638;
+ 
+}
+
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 12px 10px;
+}
+
+.image-row img {
+  width: 200px;
+  height: auto;
+}
+
+
+.h1 {
+  color: #edebca;
+  text-align: center;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 18px 0 12px;
+}
+
+
+.zig-zag-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --s: 20px;  
+  --w: 900px; 
+
+  width: min(var(--w), 90%);
+  min-height: 200px;
+  padding: 30px;
+  margin: 0 auto 18px;
+
+  background: rgb(75, 124, 239);
+
+  --_m:#0000 0 calc(2*atan(.5)),#000 0 50%;
+  mask:
+    repeating-conic-gradient(from atan(2) at 50% var(--s),var(--_m))
+      calc(2*var(--s)) calc(-1*var(--s))/calc(4*var(--s)) 100% intersect,
+    repeating-conic-gradient(from atan(-.5) at var(--s),var(--_m))
+      calc(-1*var(--s)) calc(2*var(--s))/100% calc(4*var(--s));
+}
+
+.zigzag-text {
+  margin: 0;
+  color: #bfd8fa;
+  font-size: 20px;
+  font-style: oblique;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  max-width: 820px;
+}
+
+.row {
+  display: flex;
+  gap: 25px;
+  margin: 65px 0;
+  align-items: center;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.photo {
+  width: 420px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0px;
+ 
+}
+
+
+.wavy-box1 {
+  width: 420px;     
+  height: 420px;        
+  padding: 20px;
+
+  background: #d1f113;
+  color: #0c1660;
+
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
+
+  border-radius: 12px;      
+}
+
+
+
